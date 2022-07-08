@@ -1,2 +1,5 @@
 <h1>Parks</h1>
-<p>Test</p>
+
+<% @parks.each do |park| %>
+    <p>Park Name: <%= park.name %></p>
+<% end %>
