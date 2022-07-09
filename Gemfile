@@ -36,6 +36,10 @@ gem 'bootsnap', '>= 1.1.0', require: false
 
 group :development, :test do
   gem 'pry'
+  gem 'capybara' #automate clicking button to see if its working
+  gem 'rspec-rails'
+  gem 'launchy' #save_and_open_page (to give us a visual)
+  gem 'simplecov'
 end
 
 group :development do
