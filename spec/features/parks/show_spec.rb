@@ -10,8 +10,10 @@ RSpec.describe 'the parks show page' do
     it 'displays park with the user-input id and the park attributes' do
         park = Park.create!(name: "Yellowstone National Park", state: "WY", city: "Multiple", description: "come on out and see old faithful!", fee: 22, open: false)
         visit "/parks/#{park.id}" #like going to localhost:3000/parks/1 and show me a park
-
-        # expect(page).to have_content(park.id)
+        
+        # save_and_open_page
+        
+        expect(page).to have_content(park.id)
         expect(page).to have_content(park.name)
         expect(page).to have_content(park.state)
         expect(page).to have_content(park.city)
