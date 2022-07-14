@@ -1,5 +1,6 @@
 <h1>Parks</h1>
-
+<%= link_to 'Parks Index', '/parks/' %>
+<%= link_to 'Trails Index', '/trails/' %>
 <% @parks.each_with_index do |park, index| %>
     <div id="park<%= index%>">
         <p><b>Park Name:</b> <%= park.name %> <b>Created At:</b> <%= park.created_at %></p>
