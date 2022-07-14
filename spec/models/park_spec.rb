@@ -5,7 +5,7 @@ RSpec.describe Park, type: :model do
         it { should have_many :trails }
     end
 
-    describe 'validations' do # when i create a park and it has a name, it should have a name
+    describe 'validations' do
         it { should validate_presence_of :name }
         it { should validate_presence_of :state }
         it { should validate_presence_of :city }
