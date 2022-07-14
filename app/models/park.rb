@@ -11,4 +11,8 @@ class Park < ApplicationRecord
     def self.order_by_timestamp_created
         order(created_at: :desc)
     end
+
+    def trails_count
+        trails.count
+    end
 end

@@ -1,3 +1,5 @@
+<%= link_to 'Parks Index', '/parks/' %>
+<%= link_to 'Trails Index', '/trails/' %>
 <h1>Park #<%= @park.id %> in database.</h1>
 <p>Park Name: <%= @park.name %></p>
 <p>Park State: <%= @park.state %></p>
@@ -5,3 +7,5 @@
 <p>Park Description: <%= @park.description %></p>
 <p>Park Fee: <%= @park.fee %></p>
 <p>Park Open? <%= @park.open %></p>
+<p>Trails Total: <%= @park.trails_count %></p>
+<p> <%= link_to 'Trails Open', "/parks/#{@park.id}/trails" %></p>

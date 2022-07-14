@@ -16,16 +16,28 @@ RSpec.describe 'the parks index page' do
     it 'displays parks in order by recently created first with created at next to park' do
         visit '/parks'
 
-        # save_and_open_page
-
         within '#park0' do
             expect(page).to have_content("Rocky Mountain National Park")
+            expect(page).to_not have_content("Yellowstone National Park")
             expect(page).to have_content(@rocky_mountain.created_at)
         end
 
         within '#park1' do
             expect(page).to have_content("Yellowstone National Park")
+            expect(page).to_not have_content("Rocky Mountain National Park")
             expect(page).to have_content(@yellowstone.created_at)
         end
+    end
+
+    it 'displays link at top of page to parent index' do
+        visit '/parks'
+        click_on 'Parks Index'
+        expect(current_path).to eq('/parks/')
+    end
+
+    it 'displays link at top of page to parent index' do
+        visit '/parks'
+        click_on 'Trails Index'
+        expect(current_path).to eq('/trails/')
     end
 end
