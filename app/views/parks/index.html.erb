@@ -1,5 +1,8 @@
 <h1>Parks</h1>
 
-<% @parks.each do |park| %>
-    <p>Park Name: <%= park.name %></p>
+<% @parks.each_with_index do |park, index| %>
+    <div id="park<%= index%>">
+        <p>Park Name: <%= park.name %></p>
+        <p>Created At: <%= park.created_at %></p>
+    </div>
 <% end %>
