@@ -8,3 +8,4 @@
 <p>Park Fee: <%= @park.fee %></p>
 <p>Park Open? <%= @park.open %></p>
 <p>Trails Total: <%= @park.trails_count %></p>
+<p> <%= link_to 'Trails Open', "/parks/#{@park.id}/trails" %></p>
