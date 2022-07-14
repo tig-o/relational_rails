@@ -26,4 +26,16 @@ RSpec.describe 'the parks index page' do
             expect(page).to have_content(@yellowstone.created_at)
         end
     end
+
+    it 'displays link at top of page to parent index' do
+        visit '/parks'
+        click_on 'Parks Index'
+        expect(current_path).to eq('/parks/')
+    end
+
+    it 'displays link at top of page to parent index' do
+        visit '/parks'
+        click_on 'Trails Index'
+        expect(current_path).to eq('/trails/')
+    end
 end

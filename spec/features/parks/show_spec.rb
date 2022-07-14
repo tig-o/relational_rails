@@ -28,7 +28,19 @@ RSpec.describe 'the parks show page' do
 
     it 'displays trails open per park' do
         visit "/parks/#{@rocky_mountain.id}"
-        
+
         expect(page).to have_content("Trails Total: 3")
+    end
+
+    it 'displays link at top of page to parent index' do
+        visit "/parks/#{@rocky_mountain.id}"
+        click_on 'Parks Index'
+        expect(current_path).to eq('/parks/')
+    end
+
+    it 'displays link at top of page to parent index' do
+        visit "/parks/#{@rocky_mountain.id}"
+        click_on 'Trails Index'
+        expect(current_path).to eq('/trails/')
     end
 end
