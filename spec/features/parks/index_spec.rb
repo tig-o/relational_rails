@@ -18,11 +18,13 @@ RSpec.describe 'the parks index page' do
 
         within '#park0' do
             expect(page).to have_content("Rocky Mountain National Park")
+            expect(page).to_not have_content("Yellowstone National Park")
             expect(page).to have_content(@rocky_mountain.created_at)
         end
 
         within '#park1' do
             expect(page).to have_content("Yellowstone National Park")
+            expect(page).to_not have_content("Rocky Mountain National Park")
             expect(page).to have_content(@yellowstone.created_at)
         end
     end
