@@ -16,8 +16,6 @@ RSpec.describe 'the parks index page' do
     it 'displays parks in order by recently created first with created at next to park' do
         visit '/parks'
 
-        # save_and_open_page
-
         within '#park0' do
             expect(page).to have_content("Rocky Mountain National Park")
             expect(page).to have_content(@rocky_mountain.created_at)
