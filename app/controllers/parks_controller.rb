@@ -4,7 +4,6 @@ class ParksController < ApplicationController
     end
 
     def show
-        # binding.pry
         @park = Park.find(params[:id])
     end
 end
