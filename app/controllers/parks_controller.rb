@@ -5,5 +5,6 @@ class ParksController < ApplicationController
 
     def show
         @park = Park.find(params[:id])
+        @trails = @park.trails_count
     end
 end
