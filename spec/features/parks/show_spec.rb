@@ -43,4 +43,10 @@ RSpec.describe 'the parks show page' do
         click_on 'Trails Index'
         expect(current_path).to eq('/trails/')
     end
+
+    it 'displays link to parks trails page' do
+        visit "/parks/#{@rocky_mountain.id}"
+        click_on 'Trails Open'
+        expect(current_path).to eq("/parks/#{@rocky_mountain.id}/trails")
+    end
 end
