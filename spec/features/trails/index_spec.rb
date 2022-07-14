@@ -40,5 +40,4 @@ RSpec.describe 'the trails index page' do
         click_on 'Trails Index'
         expect(current_path).to eq('/trails/')
     end
-
 end
