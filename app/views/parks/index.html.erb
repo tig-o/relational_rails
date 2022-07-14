@@ -2,7 +2,6 @@
 
 <% @parks.each_with_index do |park, index| %>
     <div id="park<%= index%>">
-        <p>Park Name: <%= park.name %></p>
-        <p>Created At: <%= park.created_at %></p>
+        <p><b>Park Name:</b> <%= park.name %> <b>Created At:</b> <%= park.created_at %></p>
     </div>
 <% end %>
