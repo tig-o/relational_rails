@@ -7,4 +7,8 @@ class Park < ApplicationRecord
     validates_presence_of :description
     validates_presence_of :fee
     validates_inclusion_of :open, :in => [true,false]
+
+    def self.order_by_timestamp_created
+        order(created_at: :desc)
+    end
 end
